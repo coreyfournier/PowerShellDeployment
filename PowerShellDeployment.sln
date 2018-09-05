@@ -14,7 +14,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployServiceExtension", "DeployServiceExtension", "{7724171C-E632-45EE-8ABF-634E69BAA485}"
 	ProjectSection(SolutionItems) = preProject
 		DeployService.ps1 = DeployService.ps1
+		DeployServiceExtension\node_modules\vss-web-extension-sdk\LICENSE = DeployServiceExtension\node_modules\vss-web-extension-sdk\LICENSE
+		my-hub.html = my-hub.html
+		DeployServiceExtension\package.json = DeployServiceExtension\package.json
+		DeployServiceExtension\node_modules\vss-web-extension-sdk\README.md = DeployServiceExtension\node_modules\vss-web-extension-sdk\README.md
+		vss-extension.json = vss-extension.json
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployWebsiteExtension", "DeployWebsiteExtension", "{BA68BFFF-2A69-4FC7-BFDD-033A3C94DC75}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -22,6 +29,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7724171C-E632-45EE-8ABF-634E69BAA485} = {313BDC9D-6038-4963-8623-F22AA9BB95F2}
+		{BA68BFFF-2A69-4FC7-BFDD-033A3C94DC75} = {313BDC9D-6038-4963-8623-F22AA9BB95F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {546F578F-7BE2-490D-9BB6-BA2542DF874F}
