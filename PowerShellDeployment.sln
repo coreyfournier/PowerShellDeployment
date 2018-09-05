@@ -12,9 +12,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployServiceExtension", "DeployServiceExtension", "{7724171C-E632-45EE-8ABF-634E69BAA485}"
+	ProjectSection(SolutionItems) = preProject
+		DeployService.ps1 = DeployService.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7724171C-E632-45EE-8ABF-634E69BAA485} = {313BDC9D-6038-4963-8623-F22AA9BB95F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {546F578F-7BE2-490D-9BB6-BA2542DF874F}
