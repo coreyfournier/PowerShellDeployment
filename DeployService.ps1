@@ -1,7 +1,6 @@
 ###############################################################################################################################################################
 #This allows you to automatically unpack the service and have it extract to the correct folder. It also turns off the service and reenables it.
 #The file to extract is expected to be in the $serviceRootFolder on the server ($targetComputer). 
-#{Environment} is expected to be in the folder path of the exe. Other than that other variables can be changed freely and not cause any issue. 
 ###############################################################################################################################################################
 
 Param(
