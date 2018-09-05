@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		DeployService.ps1 = DeployService.ps1
 		DeployWebsite.ps1 = DeployWebsite.ps1
 		EfMigration.ps1 = EfMigration.ps1
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
