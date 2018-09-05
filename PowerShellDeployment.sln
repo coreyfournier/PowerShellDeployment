@@ -13,7 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployServiceExtension", "DeployServiceExtension", "{7724171C-E632-45EE-8ABF-634E69BAA485}"
 	ProjectSection(SolutionItems) = preProject
-		DeployService.ps1 = DeployService.ps1
 		DeployServiceExtension\node_modules\vss-web-extension-sdk\LICENSE = DeployServiceExtension\node_modules\vss-web-extension-sdk\LICENSE
 		DeployServiceExtension\my-hub.html = DeployServiceExtension\my-hub.html
 		DeployServiceExtension\package.json = DeployServiceExtension\package.json
@@ -29,6 +28,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "@types", "@types", "{CA4DD6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vss-web-extension-sdk", "vss-web-extension-sdk", "{4D1C7D00-5A23-4C51-B897-BFD2BB347B42}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{548276EA-B700-4CDE-86DE-87834A3F1840}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{4C57DBAA-5793-43B3-B965-A4B924E7A1B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "buildAndReleaseTask", "buildAndReleaseTask", "{15A3E447-EB1C-443F-88F5-2F390928200B}"
+	ProjectSection(SolutionItems) = preProject
+		DeployServiceExtension\buildAndReleaseTask\DeployService.ps1 = DeployServiceExtension\buildAndReleaseTask\DeployService.ps1
+		DeployServiceExtension\buildAndReleaseTask\task.json = DeployServiceExtension\buildAndReleaseTask\task.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +48,9 @@ Global
 		{52A8830C-6888-47D7-B408-2C3070FB1C81} = {7724171C-E632-45EE-8ABF-634E69BAA485}
 		{CA4DD669-EADF-4C4D-BECA-78AD13FBA17C} = {52A8830C-6888-47D7-B408-2C3070FB1C81}
 		{4D1C7D00-5A23-4C51-B897-BFD2BB347B42} = {52A8830C-6888-47D7-B408-2C3070FB1C81}
+		{548276EA-B700-4CDE-86DE-87834A3F1840} = {7724171C-E632-45EE-8ABF-634E69BAA485}
+		{4C57DBAA-5793-43B3-B965-A4B924E7A1B2} = {7724171C-E632-45EE-8ABF-634E69BAA485}
+		{15A3E447-EB1C-443F-88F5-2F390928200B} = {7724171C-E632-45EE-8ABF-634E69BAA485}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {546F578F-7BE2-490D-9BB6-BA2542DF874F}

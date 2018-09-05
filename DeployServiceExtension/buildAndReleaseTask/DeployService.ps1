@@ -2,24 +2,24 @@
 #This allows you to automatically unpack the service and have it extract to the correct folder. It also turns off the service and reenables it.
 #The file to extract is expected to be in the $serviceRootFolder on the server ($targetComputer). 
 ###############################################################################################################################################################
-
+[CmdletBinding()]
 Param(
 	<#Fully qualified name of the target computer.#>
-	[string]$targetComputer,
+	[string][Parameter(Mandatory=$true)]$targetComputer = Get-VstsInput -Name 'targetComputer' -Require,
 	<#User name to execute against the server (optional, if excluded then executed against current user) #>
-	[string]$userName,
+	[string]$userName = Get-VstsInput -Name 'userName ',
 	<#User password to execute against the server (optional, if excluded then executed against current user) #>
-	[string]$userPassword,
+	[string]$userPassword = Get-VstsInput -Name 'userPassword',
 	<#Tells the script to not turn the services back on.#>
-	[bool] $dontTurnOn = $false,
+	[bool] $dontTurnOn = Get-VstsInput -Name 'dontTurnOn' -Require,
 	# Specifiy the process name followed by the individual services that run in the process that will required to be shut down and restarted.
 	#ProcessName:ServicesInProcess,NextService
 	[ValidatePattern('.+\:((.+)|(.+,))')]
-	[string] $targetService,
+	[string][Parameter(Mandatory=$true)] $targetService = Get-VstsInput -Name 'targetService' -Require,
 	#Location and name of the zip file to be extrated
-	[string] $sourceZipFile,
+	[string][Parameter(Mandatory=$true)] $sourceZipFile  = Get-VstsInput -Name 'sourceZipFile' -Require,
 	#Location to extract the file and remove any existing files
-	[string] $destinationFolder
+	[string][Parameter(Mandatory=$true)] $destinationFolder  = Get-VstsInput -Name 'destinationFolder' -Require
 )
 
 #Stop execution on the first error

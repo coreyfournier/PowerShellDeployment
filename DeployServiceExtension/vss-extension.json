@@ -6,7 +6,7 @@
   "name": "Windows Service Deployment",
   "description": "Automates the deployment of a windows service. Turns off services, unzips the code, and turns the services back on.",
   "public": false,
-  "categories": [ "Code" ],
+  "categories": [ "Build and release" ],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
@@ -27,13 +27,7 @@
   ],
   "files": [
     {
-      "path": "my-hub.html",
-      "addressable": true
-    },
-    {
-      "path": "node_modules/vss-web-extension-sdk/lib",
-      "addressable": true,
-      "packagePath": "lib"
+      "path": "buildAndReleaseTask"
     }
   ]
 }
