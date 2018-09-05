@@ -5,7 +5,6 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{313BDC9D-6038-4963-8623-F22AA9BB95F2}"
 	ProjectSection(SolutionItems) = preProject
-		DeployService.ps1 = DeployService.ps1
 		DeployWebsite.ps1 = DeployWebsite.ps1
 		EfMigration.ps1 = EfMigration.ps1
 		LICENSE = LICENSE
