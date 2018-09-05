@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployServiceExtension", "D
 		my-hub.html = my-hub.html
 		DeployServiceExtension\package.json = DeployServiceExtension\package.json
 		DeployServiceExtension\node_modules\vss-web-extension-sdk\README.md = DeployServiceExtension\node_modules\vss-web-extension-sdk\README.md
-		vss-extension.json = vss-extension.json
+		DeployServiceExtension\vss-extension.json = DeployServiceExtension\vss-extension.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployWebsiteExtension", "DeployWebsiteExtension", "{BA68BFFF-2A69-4FC7-BFDD-033A3C94DC75}"

@@ -1,0 +1,39 @@
+{
+  "manifestVersion": 1,
+  "id": "Windows-Service-Deployment",
+  "publisher": "coreyfournier",
+  "version": "1.0.0",
+  "name": "Windows Service Deployment",
+  "description": "Automates the deployment of a windows service. Turns off services, unzips the code, and turns the services back on.",
+  "public": false,
+  "categories": [ "Code" ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "my-hub",
+      "type": "ms.vss-web.hub",
+      "targets": [
+        "ms.vss-code-web.code-hub-group"
+      ],
+      "properties": {
+        "name": "My Hub",
+        "uri": "my-hub.html"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "my-hub.html",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+  ]
+}
