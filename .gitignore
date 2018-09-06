@@ -328,3 +328,4 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/DeployServiceExtension/coreyfournier.Windows-Service-Deployment-1.0.0.vsix

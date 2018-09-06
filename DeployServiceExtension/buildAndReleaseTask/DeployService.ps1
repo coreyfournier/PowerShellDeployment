@@ -5,21 +5,21 @@
 [CmdletBinding()]
 Param(
 	<#Fully qualified name of the target computer.#>
-	[string][Parameter(Mandatory=$true)]$targetComputer = Get-VstsInput -Name 'targetComputer' -Require,
+	[string][Parameter(Mandatory=$true)]$targetComputer,
 	<#User name to execute against the server (optional, if excluded then executed against current user) #>
-	[string]$userName = Get-VstsInput -Name 'userName ',
+	[string]$userName,
 	<#User password to execute against the server (optional, if excluded then executed against current user) #>
-	[string]$userPassword = Get-VstsInput -Name 'userPassword',
+	[string]$userPassword,
 	<#Tells the script to not turn the services back on.#>
-	[bool] $dontTurnOn = Get-VstsInput -Name 'dontTurnOn' -Require,
+	[bool] $dontTurnOn,
 	# Specifiy the process name followed by the individual services that run in the process that will required to be shut down and restarted.
 	#ProcessName:ServicesInProcess,NextService
 	[ValidatePattern('.+\:((.+)|(.+,))')]
-	[string][Parameter(Mandatory=$true)] $targetService = Get-VstsInput -Name 'targetService' -Require,
+	[string][Parameter(Mandatory=$true)] $targetService,
 	#Location and name of the zip file to be extrated
-	[string][Parameter(Mandatory=$true)] $sourceZipFile  = Get-VstsInput -Name 'sourceZipFile' -Require,
+	[string][Parameter(Mandatory=$true)] $sourceZipFile,
 	#Location to extract the file and remove any existing files
-	[string][Parameter(Mandatory=$true)] $destinationFolder  = Get-VstsInput -Name 'destinationFolder' -Require
+	[string][Parameter(Mandatory=$true)] $destinationFolder
 )
 
 #Stop execution on the first error
