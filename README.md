@@ -11,22 +11,32 @@ See the script file for more information on parameters, but examples of how I ha
 
 ## Website Deployment (scriptDeployWebsite.ps1)
 For VSTS I publish the script as an artifact using the name '$(Build.BuildNumber)-Scripts' and reference the script path using this:
+
 `$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\DeployWebsite.ps1`
+
 Arguments to the script: 
+
 `-webSiteRootFolder  "C:\inetpub\wwwroot" -targetComputer "$(WebServerName)" -projectAndSites "$(BuildConfiguration)-Project1.zip:DomainName$(BuildConfiguration).tsged.com,$(BuildConfiguration)-Project2.zip:DomainName2$(BuildConfiguration).tsged.com" -userName $(ServerUserName) -userPassword $(ServerUserPassword)`
+
 User defined variables are: ServerUserPassword, WebServerName, ServerUserName. If the username and password are not supplied it connects to the destination server
 
 
 ## Service Deployment (DeployService.ps1)
 For VSTS I publish the script as an artifact using the name '$(Build.BuildNumber)-Scripts' and reference the script path using this:
+
  `$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\DeployService.ps1`
  Arguments to the script:
+
  `-dontTurnOn $false -targetComputer "$(ServicesServerName)" -userName $(ServerUserName) -userPassword $(ServerUserPassword) -targetService "ProcessName:HostedServices-$(BuildConfiguration),PollingBullhornService-$(BuildConfiguration),PickupAndSendLeadsService-$(BuildConfiguration),WorkflowService-$(BuildConfiguration),DataTrickle-$(BuildConfiguration),JobScheduler-$(BuildConfiguration)" -sourceZipFile "C:\Services\Recruiting\$(BuildConfiguration)-CodeFile.zip" -destinationFolder "C:\Services\Recruiting\$(BuildConfiguration)\"`
+
   User defined variables are: ServicesServerName, ServerUserName, ServerUserPassword
 
 ## Entity Framework Migration (EfMigration.ps1)
 EF requires access to the Framework path, so I publish the path as an artifact. For me the relative path is 'Packages\EntityFramework.6.1.3' and is stored as a variable in VSTS when and if the version changes.
 For VSTS I publish the script as an artifact using the name '$(Build.BuildNumber)-Scripts' and reference the script path using this:
+
 `$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\EfMigration.ps1`
+
  Arguments to the script:
+
  `-EFrameworkPath "$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\tools" -projectMigrationExe "$(Build.DefinitionName)\$(Build.BuildNumber)-BuiltFiles\CoreFile.dll" -connectionString "$(DatabaseConnection)"`
