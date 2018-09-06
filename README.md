@@ -25,6 +25,7 @@ User defined variables are: ServerUserPassword, WebServerName, ServerUserName. I
 For VSTS I publish the script as an artifact using the name '$(Build.BuildNumber)-Scripts' and reference the script path using this:
 
  `$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\DeployService.ps1`
+
  Arguments to the script:
 
  `-dontTurnOn $false -targetComputer "$(ServicesServerName)" -userName $(ServerUserName) -userPassword $(ServerUserPassword) -targetService "ProcessName:HostedServices-$(BuildConfiguration),PollingBullhornService-$(BuildConfiguration),PickupAndSendLeadsService-$(BuildConfiguration),WorkflowService-$(BuildConfiguration),DataTrickle-$(BuildConfiguration),JobScheduler-$(BuildConfiguration)" -sourceZipFile "C:\Services\Recruiting\$(BuildConfiguration)-CodeFile.zip" -destinationFolder "C:\Services\Recruiting\$(BuildConfiguration)\"`
