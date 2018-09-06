@@ -1,6 +1,6 @@
 # Power Shell Deployment
 Power Shell Scripts to automate deploying websites and services. It also contains a script to run the latest migrations for Entity Framework.
-I am trying to create VSTS extensions, so the organization of the files will change as well as the scripts may also change to satisfy requirements of this.
+I am trying to create VSTS extensions, so the organization of the files will change as well as the scripts may also change to satisfy requirements of this. Some script files are located in sub folders and are not noted below.
 See the script file for more information on parameters, but examples of how I have setup my VSTS PowerShell script tasks are shown below.
 
 ## Requirements
@@ -10,6 +10,8 @@ See the script file for more information on parameters, but examples of how I ha
 * EF requires the nuget package data for Entity Framwork. This is documented in detail below.
 
 ## Website Deployment (scriptDeployWebsite.ps1)
+Extracts the zip file and allows you to specify the app pool and website name. This is necessary as it shuts them down and restarts after the code is copied to the server. If this isn't done the files could be locked
+
 For VSTS I publish the script as an artifact using the name '$(Build.BuildNumber)-Scripts' and reference the script path using this:
 
 `$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\DeployWebsite.ps1`
@@ -22,6 +24,8 @@ User defined variables are: ServerUserPassword, WebServerName, ServerUserName. I
 
 
 ## Service Deployment (DeployService.ps1)
+Extracts the zip file and shuts down all services and ensures the process is stopped prior to replacing the code. Once complete the services are started backup.
+
 For VSTS I publish the script as an artifact using the name '$(Build.BuildNumber)-Scripts' and reference the script path using this:
 
  `$(Build.DefinitionName)\$(Build.BuildNumber)-Scripts\DeployService.ps1`
