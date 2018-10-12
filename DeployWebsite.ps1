@@ -10,8 +10,8 @@ Param(
 	#Array of [Zip File:Website,Project Name Website]
 	#The website MUST have the same name as the app pool, otherwise the app pool will not be stopped and started.
 	# Ex: "FileName.zip:SiteNameThatMatchesAppPool,FileName.zip:SiteNameThatMatchesAppPool"
-    #This supports individual names for the site, app pool and the folder. The curly braces and pipe are literals.
-    # EX: "FileName.zip:{SiteName|AppPoolName}SiteFolder"
+        #This supports individual names for the site, app pool and the folder. The curly braces and pipe are literals.
+        # EX: "FileName.zip:{SiteName|AppPoolName}SiteFolder"
 	[string] $projectAndSites,
 	# Usually "C:\inetpub\wwwroot"
 	[string] $webSiteRootFolder,
@@ -53,11 +53,11 @@ function MultipleCommandsByArray([string[]] $targets, [string] $command)
     {
         If($commands -eq "")
         {
-            $commands = "$($command) $($target)"
+            $commands = "$($command) ""$($target)"""
         }
         Else
         {
-            $commands = "$($commands); $($command) $($target)"
+            $commands = "$($commands); $($command) ""$($target)"""
         }
     }
 
@@ -215,6 +215,5 @@ If($webSites.Length -gt 0)
 
 
 }
-
 
 
